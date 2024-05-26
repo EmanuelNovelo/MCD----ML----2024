@@ -19,6 +19,7 @@ Los temas que se verán en el curso son:
 ### Tareas
 
 - [Tarea 1](/Tareas/Tarea%201.ipynb)
-    - [Trabajo en clase 1](/Trabajos%20en%20Clase/Trabajo%20en%20Clase%201.ipynb)
+    - [Tarea en clase 1](/Trabajos%20en%20Clase/Trabajo%20en%20Clase%201.ipynb)
 
-- [Tarea 2](/Tareas/)
+- [Tarea 2](/Tareas/Tarea%202.ipynb)
+    - Nota: Incluye la Tarea en Clase 2
