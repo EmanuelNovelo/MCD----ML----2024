@@ -26,3 +26,6 @@ Los temas que se verán en el curso son:
 
 - [Tarea 3](/Tareas/Tarea%203.ipynb)
     - Nota: Incluye la Tarea en Clase 3
+
+- [Tarea 4](/Tareas/Tarea%204.ipynb)
+    - Nota: Incluye la Tarea en Clase 4
