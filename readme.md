@@ -43,6 +43,9 @@ Se usaron 2 datasets para la realización de los ejerccios y tareas del curso
 
 - [Tarea 6](/Tareas/PDFs%20LateX/Full_Paper.pdf)
     - Nota Importante: A partir de la Tarea 6, la ruta de este archivo readme a la tarea en curso, dirigirá al paper completo (actualizado respecto a la última tarea). Por ejemplo, la tarea 6 dirige al paper completo que contiene la tarea 5, que se enfoca en unsupervised learning, así como la tarea 6, que se enfoca en supervised learning. Si se quisiera ver en particular la tarea 6, dar click [aquí](/Tareas/Tarea_6_LateX.ipynb). Para las próximas tareas, no se anexará la ruta directa a los notebooks indidivuales, éstos tendrán que ser abiertos desde la carpeta [Tareas](/Tareas/).
+
+- Tarea 7
+    - Nota Importante: Esta tarea pide agregar al artículo toda la parte metodológica de los algoritmos y modelos empleados en el conjunto de datos. Hasta ahora la metodología se ha estado agregando, por lo que no se anexa link de esta tarea. 
     
 
 - Para ver el artículo completo en PDF acceder a [Full_article](/Tareas/PDFs%20LateX/Full_Paper.pdf)
