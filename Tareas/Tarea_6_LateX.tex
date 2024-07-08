@@ -403,7 +403,7 @@ RMSE y MAPE} contra las predicciones de una regresión lineal múltiple.
 La RLM resulta con mejor performance en general.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{ }{\boxspacing}
+\prompt{In}{incolor}{1}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} lectura de datos}
 \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
@@ -413,7 +413,7 @@ La RLM resulta con mejor performance en general.
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{1}{\boxspacing}
+\prompt{In}{incolor}{2}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{features} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Engine Size(L)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Cylinders}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Fuel Consumption City (L/100 km)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Fuel Consumption Hwy (L/100 km)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Fuel Consumption Comb (L/100 km)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
@@ -422,7 +422,7 @@ La RLM resulta con mejor performance en general.
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{2}{\boxspacing}
+\prompt{In}{incolor}{3}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{X} \PY{o}{=} \PY{n}{features}
 \PY{n}{y} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{CO2 Emissions(g/km)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}
@@ -430,7 +430,7 @@ La RLM resulta con mejor performance en general.
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{5}{\boxspacing}
+\prompt{In}{incolor}{4}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{train\PYZus{}test\PYZus{}split}
 \PY{n}{X\PYZus{}train}\PY{p}{,} \PY{n}{X\PYZus{}test}\PY{p}{,} \PY{n}{y\PYZus{}train}\PY{p}{,} \PY{n}{y\PYZus{}test} \PY{o}{=} \PY{n}{train\PYZus{}test\PYZus{}split}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{test\PYZus{}size}\PY{o}{=}\PY{l+m+mf}{0.2}\PY{p}{)}
@@ -440,7 +440,7 @@ La RLM resulta con mejor performance en general.
     \subsection{Exploración previa}\label{exploraciuxf3n-previa}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{13}{\boxspacing}
+\prompt{In}{incolor}{5}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
 \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
@@ -469,14 +469,14 @@ sido probado previamente en la literatura como un buen predictor de
 emisiones de CO2.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{6}{\boxspacing}
+\prompt{In}{incolor}{11}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{metrics} \PY{k+kn}{import} \PY{n}{r2\PYZus{}score}
 \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{gaussian\PYZus{}process} \PY{k+kn}{import} \PY{n}{GaussianProcessRegressor}
 \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{gaussian\PYZus{}process}\PY{n+nn}{.}\PY{n+nn}{kernels} \PY{k+kn}{import} \PY{n}{RBF}\PY{p}{,} \PY{n}{ConstantKernel}\PY{p}{,} \PY{n}{WhiteKernel}
 
 \PY{n}{kernel} \PY{o}{=} \PY{n}{ConstantKernel}\PY{p}{(}\PY{l+m+mf}{1.0}\PY{p}{)} \PY{o}{+} \PY{n}{ConstantKernel}\PY{p}{(}\PY{l+m+mf}{1.0}\PY{p}{)} \PY{o}{*} \PY{n}{RBF}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}  \PY{o}{+} \PY{n}{WhiteKernel}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
-\PY{n}{model} \PY{o}{=} \PY{n}{GaussianProcessRegressor}\PY{p}{(}\PY{n}{kernel}\PY{o}{=}\PY{n}{kernel}\PY{p}{)}
+\PY{n}{model} \PY{o}{=} \PY{n}{GaussianProcessRegressor}\PY{p}{(}\PY{n}{kernel}\PY{o}{=}\PY{n}{kernel}\PY{p}{,} \PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
 \PY{n}{model}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{X\PYZus{}train}\PY{p}{,} \PY{n}{y\PYZus{}train}\PY{p}{)}
 \PY{n}{y\PYZus{}pred\PYZus{}tr}\PY{p}{,} \PY{n}{y\PYZus{}pred\PYZus{}tr\PYZus{}std} \PY{o}{=} \PY{n}{model}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{X\PYZus{}train}\PY{p}{,} \PY{n}{return\PYZus{}std}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
 \PY{n}{y\PYZus{}pred\PYZus{}te}\PY{p}{,} \PY{n}{y\PYZus{}pred\PYZus{}te\PYZus{}std} \PY{o}{=} \PY{n}{model}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{X\PYZus{}test}\PY{p}{,} \PY{n}{return\PYZus{}std}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
@@ -494,7 +494,7 @@ again may find a better value.
     \end{Verbatim}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{7}{\boxspacing}
+\prompt{In}{incolor}{12}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
 \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{p}{)}
@@ -506,7 +506,7 @@ again may find a better value.
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{7}{\boxspacing}
+\prompt{Out}{outcolor}{12}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 Text(0, 0.5, 'Predicted')
 \end{Verbatim}
@@ -525,7 +525,7 @@ recta horizontal, se discutirá más adelante en este paper las posibles
 causas.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{10}{\boxspacing}
+\prompt{In}{incolor}{16}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{metrics} \PY{k+kn}{import} \PY{n}{r2\PYZus{}score}\PY{p}{,} \PY{n}{mean\PYZus{}absolute\PYZus{}error}\PY{p}{,} \PY{n}{mean\PYZus{}squared\PYZus{}error}
 \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
@@ -548,13 +548,13 @@ causas.
 \end{tcolorbox}
 
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
-\prompt{Out}{outcolor}{10}{\boxspacing}
+\prompt{Out}{outcolor}{16}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-  Metric       Value
-0    MAE   12.483388
-1    MSE  858.493804
-2   RMSE   29.300065
-3   MAPE    5.491289
+  Metric        Value
+0    MAE    13.908890
+1    MSE  1049.595387
+2   RMSE    32.397460
+3   MAPE     5.967524
 \end{Verbatim}
 \end{tcolorbox}
         
@@ -604,7 +604,7 @@ las variables numéricas hacia el resultado a predecir, que es la emisión
 de CO2.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{11}{\boxspacing}
+\prompt{In}{incolor}{17}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{linear\PYZus{}model} \PY{k+kn}{import} \PY{n}{LinearRegression}
 
@@ -651,11 +651,11 @@ de CO2.
 
     \begin{Verbatim}[commandchars=\\\{\}]
   Metric  Linear Regression  Gaussian Process
-0    MAE          10.967599         12.483388
-1    MSE         312.066899        858.493804
-2   RMSE          17.665415         29.300065
-3   MAPE           4.199974          5.491289
-4     R2           0.903524          0.734595
+0    MAE          11.730498         13.908890
+1    MSE         353.567732       1049.595387
+2   RMSE          18.803397         32.397460
+3   MAPE           4.587831          5.967524
+4     R2           0.895123          0.688664
     \end{Verbatim}
 
     \begin{center}
@@ -670,6 +670,294 @@ tradicional, sin embargo, cabe destacar y dejar muy claro que no se
 realizaron esfuerzos de hyperparameter tunning, feature engineering,
 dimensionality reduction, ni parameter optimization, que pudieran
 resultar en un performance de índole superior a favor del modelo GPR.
+
+    \subsubsection{Diseño de Experimentos}\label{diseuxf1o-de-experimentos}
+
+    Se realiza una optimización de Hipermarametros para el modelo de
+regresión gaussiana con el fin de mejorar el rendimiento del modelo.
+Finalmente se vuelve a comparar con la Regresión Lineal Múltiple.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{gaussian\PYZus{}process} \PY{k+kn}{import} \PY{n}{GaussianProcessRegressor}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{GridSearchCV}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{gaussian\PYZus{}process}\PY{n+nn}{.}\PY{n+nn}{kernels} \PY{k+kn}{import} \PY{n}{RBF}\PY{p}{,} \PY{n}{DotProduct}
+\PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+
+\PY{n}{X\PYZus{}tr} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{X\PYZus{}train}\PY{p}{)}
+\PY{n}{y\PYZus{}tr} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{y\PYZus{}train}\PY{p}{)}
+
+\PY{n}{param\PYZus{}grid} \PY{o}{=} \PY{p}{[}\PY{p}{\PYZob{}}
+    \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{alpha}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}  \PY{p}{[}\PY{l+m+mf}{1e\PYZhy{}2}\PY{p}{,} \PY{l+m+mf}{1e\PYZhy{}3}\PY{p}{]}\PY{p}{,}
+    \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{kernel}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{p}{[}\PY{n}{RBF}\PY{p}{(}\PY{n}{l}\PY{p}{)} \PY{k}{for} \PY{n}{l} \PY{o+ow}{in} \PY{n}{np}\PY{o}{.}\PY{n}{logspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]}
+\PY{p}{\PYZcb{}}\PY{p}{,} \PY{p}{\PYZob{}}
+    \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{alpha}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}  \PY{p}{[}\PY{l+m+mf}{1e\PYZhy{}2}\PY{p}{,} \PY{l+m+mf}{1e\PYZhy{}3}\PY{p}{]}\PY{p}{,}
+    \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{kernel}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{p}{[}\PY{n}{DotProduct}\PY{p}{(}\PY{n}{sigma\PYZus{}0}\PY{p}{)} \PY{k}{for} \PY{n}{sigma\PYZus{}0} \PY{o+ow}{in} \PY{n}{np}\PY{o}{.}\PY{n}{logspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]}
+\PY{p}{\PYZcb{}}\PY{p}{]}
+
+\PY{c+c1}{\PYZsh{} scores for regression}
+\PY{n}{scores} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{explained\PYZus{}variance}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+
+\PY{n}{gp} \PY{o}{=} \PY{n}{GaussianProcessRegressor}\PY{p}{(}\PY{p}{)}
+\PY{k}{for} \PY{n}{score} \PY{o+ow}{in} \PY{n}{scores}\PY{p}{:}
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZsh{} Tuning hyper\PYZhy{}parameters for }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{score}\PY{p}{)}
+    \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}
+
+    \PY{n}{clf} \PY{o}{=} \PY{n}{GridSearchCV}\PY{p}{(}\PY{n}{estimator}\PY{o}{=}\PY{n}{gp}\PY{p}{,} \PY{n}{param\PYZus{}grid}\PY{o}{=}\PY{n}{param\PYZus{}grid}\PY{p}{,} \PY{n}{cv}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{,} \PY{n}{scoring}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{score}\PY{p}{)}
+    \PY{c+c1}{\PYZsh{} Reshape X\PYZus{}tr only if it\PYZsq{}s 1\PYZhy{}dimensional}
+    \PY{k}{if} \PY{n}{X\PYZus{}tr}\PY{o}{.}\PY{n}{ndim} \PY{o}{==} \PY{l+m+mi}{1}\PY{p}{:}
+        \PY{n}{X\PYZus{}tr} \PY{o}{=} \PY{n}{X\PYZus{}tr}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+    \PY{n}{clf}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{X\PYZus{}tr}\PY{p}{,} \PY{n}{y\PYZus{}tr}\PY{p}{)}
+    \PY{n+nb}{print}\PY{p}{(}\PY{n}{clf}\PY{o}{.}\PY{n}{best\PYZus{}params\PYZus{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\# Tuning hyper-parameters for explained\_variance
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:419: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter length\_scale is close to the
+specified lower bound 1e-05. Decreasing the bound and calling fit again may find
+a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:419: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter length\_scale is close to the
+specified lower bound 1e-05. Decreasing the bound and calling fit again may find
+a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:419: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter length\_scale is close to the
+specified lower bound 1e-05. Decreasing the bound and calling fit again may find
+a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:419: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter length\_scale is close to the
+specified lower bound 1e-05. Decreasing the bound and calling fit again may find
+a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\{'alpha': 0.01, 'kernel': RBF(length\_scale=10)\}
+\# Tuning hyper-parameters for r2
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:419: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter length\_scale is close to the
+specified lower bound 1e-05. Decreasing the bound and calling fit again may find
+a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:419: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter length\_scale is close to the
+specified lower bound 1e-05. Decreasing the bound and calling fit again may find
+a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:419: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter length\_scale is close to the
+specified lower bound 1e-05. Decreasing the bound and calling fit again may find
+a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:419: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter length\_scale is close to the
+specified lower bound 1e-05. Decreasing the bound and calling fit again may find
+a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+C:\textbackslash{}Users\textbackslash{}emanuel.novelo\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Packages\textbackslash{}PythonSoftwareFoundation.Python.3
+.11\_qbz5n2kfra8p0\textbackslash{}LocalCache\textbackslash{}local-packages\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}sklearn\textbackslash{}gaussian\_process\textbackslash{}kernels.py:429: ConvergenceWarning: The
+optimal value found for dimension 0 of parameter sigma\_0 is close to the
+specified upper bound 100000.0. Increasing the bound and calling fit again may
+find a better value.
+  warnings.warn(
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\{'alpha': 0.01, 'kernel': RBF(length\_scale=10)\}
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{22}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Predict on the test data}
+\PY{n}{X\PYZus{}te} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{X\PYZus{}test}\PY{p}{)}
+\PY{n}{y\PYZus{}te} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{y\PYZus{}test}\PY{p}{)}
+
+\PY{n}{y\PYZus{}pred} \PY{o}{=} \PY{n}{clf}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{X\PYZus{}te}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    Se muestra a continuación los resultados de la predicción vs las
+observaciones actuales en un Scatterplot. Finalmente se muestran los
+resultados con las métricas de desempeño previamente empleadas.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{23}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Plotting}
+\PY{n}{plt}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{y\PYZus{}te}\PY{p}{,} \PY{n}{y\PYZus{}pred}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Actual Emissions}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Predicted Emissions}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Actual vs Predicted Emissions of CO2}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{p}{[}\PY{n}{y\PYZus{}te}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{y\PYZus{}te}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{n}{y\PYZus{}te}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{y\PYZus{}te}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{Tarea_6_LateX_files/Tarea_6_LateX_26_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Desde la misma gráfica ScatterPlot se observa como se tuvo un mejor
+ajuste en los datos de predicción vs los observados. Además ya no se
+percibe la predicción constatne en el valor 250.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{24}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Calculate metrics}
+\PY{n}{mae} \PY{o}{=} \PY{n}{mean\PYZus{}absolute\PYZus{}error}\PY{p}{(}\PY{n}{y\PYZus{}te}\PY{p}{,} \PY{n}{y\PYZus{}pred}\PY{p}{)}
+\PY{n}{mse} \PY{o}{=} \PY{n}{mean\PYZus{}squared\PYZus{}error}\PY{p}{(}\PY{n}{y\PYZus{}te}\PY{p}{,} \PY{n}{y\PYZus{}pred}\PY{p}{)}
+\PY{n}{rmse} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{mse}\PY{p}{)}
+\PY{n}{mape} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{p}{(}\PY{n}{y\PYZus{}te} \PY{o}{\PYZhy{}} \PY{n}{y\PYZus{}pred}\PY{p}{)} \PY{o}{/} \PY{n}{y\PYZus{}te}\PY{p}{)}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+\PY{n}{r2} \PY{o}{=} \PY{n}{r2\PYZus{}score}\PY{p}{(}\PY{n}{y\PYZus{}te}\PY{p}{,} \PY{n}{y\PYZus{}pred}\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{} Print metrics}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{MAE: }\PY{l+s+si}{\PYZob{}}\PY{n}{mae}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{MSE: }\PY{l+s+si}{\PYZob{}}\PY{n}{mse}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{RMSE: }\PY{l+s+si}{\PYZob{}}\PY{n}{rmse}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{MAPE: }\PY{l+s+si}{\PYZob{}}\PY{n}{mape}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{R2: }\PY{l+s+si}{\PYZob{}}\PY{n}{r2}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+MAE: 5.748593839203
+MSE: 657.4599804086429
+RMSE: 25.64098243844496
+MAPE: 27.084351647188402\%
+R2: 0.8049810000564228
+    \end{Verbatim}
+
+    En los resultados de las métricas se puede observar una mejora
+significativa respecto al primer modelo base de GPR. Salvo por el MAE,
+en general el modelo de Regresión Lineal Múltiple conservó mejores
+resultados de error. A través del diseño de experimentos, el modelo tomó
+aproximadamente seis veces más de tiempo de entrenamiento que el modelo
+base (30 vs 5 mins).
 
     \subsection{Bibliografía de la
 sección}\label{bibliografuxeda-de-la-secciuxf3n}
