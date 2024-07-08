@@ -51,7 +51,7 @@ Se usaron 2 datasets para la realización de los ejerccios y tareas del curso
     - Nota Importante: En esta tarea se agregó el marco teórico del artículo (denominado "Abstract" y colocado al inicio del artículo; se agregó en el artículo completo que es "Full_article"), en éste se describieron los resultados de las métricas de desempeño de los algoritmos utilizados para la parte de Aprendizaje Supervisado, para la sección de No Supervisado, solo se describieron los resultados de la clusterización. 
 
 - [Tarea 9](/Tareas/Tarea_6_LateX.ipynb) 
-    - Nota Importante: Para la tarea 9 se actualizo la tarea 6, agregando la parte de Diseño de Experimentos, Además se añadió también en el [Artículo Final](/Tareas/PDFs%20LateX/Full_paper.pdf), tanto en los resultados como en el Abstract.
+    - Nota Importante: Para la tarea 9 se actualizo la tarea 6, agregando la parte de Diseño de Experimentos, Además se añadió también en el [Artículo Final](/Tareas/PDFs%20LateX/Full_Paper.pdf), tanto en los resultados como en el Abstract.
 
 - Para ver el artículo completo en PDF acceder a [Full_article](/Tareas/PDFs%20LateX/Full_Paper.pdf)
 - Para ver los archivos LateX originales acceder a [LateX_papers](/Tareas/) y ver los archivos .tex
