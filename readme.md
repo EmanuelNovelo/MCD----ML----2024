@@ -53,6 +53,10 @@ Se usaron 2 datasets para la realización de los ejerccios y tareas del curso
 - [Tarea 9](/Tareas/Tarea_6_LateX.ipynb) 
     - Nota Importante: Para la tarea 9 se actualizo la tarea 6, agregando la parte de Diseño de Experimentos, Además se añadió también en el [Artículo Final](/Tareas/PDFs%20LateX/Full_Paper.pdf), tanto en los resultados como en el Abstract.
 
-- Para ver el artículo completo en PDF acceder a [Full_article](/Tareas/PDFs%20LateX/Full_Paper.pdf)
+- [Tarea Final](/Tareas/PDFs%20LateX/Articulo_Final_22Julio.pdf)
+    - Nota: La última tarea consistió en corregir los puntos de feedback compartidos por el maestro, de esta forma se termina el artículo final y se presenta el lunes 22 de Julio antes de la clase. En la tarea 9 se puede visualizar el artículo previo a los cambios del feedback, en este link de la Tarea Final se puede visualizar el artículo ya con los cambios realizados, en su versión final.
+
+- Para ver el artículo completo en PDF acceder a [Full_article](/Tareas/PDFs%20LateX/Articulo_Final_22Julio.pdf)
+
 - Para ver los archivos LateX originales acceder a [LateX_papers](/Tareas/) y ver los archivos .tex
 - Para ver notebooks de python originales acceder a [Notebooks](/Tareas/) y ver los archivos .ipynb
